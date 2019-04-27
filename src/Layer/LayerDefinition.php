@@ -33,6 +33,8 @@ class LayerDefinition implements Countable
 {
     private $neuronCount;
 
+    private $activationFunction;
+
     /**
      * LayerDefinition constructor.
      *
@@ -42,9 +44,10 @@ class LayerDefinition implements Countable
      *
      * @return void
      */
-    public function __construct($neuronCount)
+    public function __construct($neuronCount, $activationFunction = FANN_LINEAR)
     {
         $this->neuronCount = $neuronCount;
+        $this->activationFunction = $activationFunction;
     }
 
     /**
@@ -91,4 +94,30 @@ class LayerDefinition implements Countable
         return $this;
     }
 
+    /**
+     * Get activation function
+     *
+     * Return the activation function for the layer
+     *
+     * @return int
+     */
+    public function getActivationFunction()
+    {
+        return $this->activationFunction;
+    }
+
+    /**
+     * Set activation function
+     *
+     * Set up the activation function for the layer
+     *
+     * @param int $activationFunction The activation function
+     *
+     * @return LayerDefinition
+     */
+    public function setActivationFunction($activationFunction)
+    {
+        $this->activationFunction = $activationFunction;
+        return $this;
+    }
 }
