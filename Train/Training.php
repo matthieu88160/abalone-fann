@@ -43,9 +43,9 @@ $ann = new Ann($heap);
 
 $ann->trainFromFile(
     new SplFileInfo(__DIR__ . '/../trainingFile.data'),
-    2000,
+    20000,
     0,
-    0.01
+    0.0001
 );
 
 $ann->save(__DIR__ . '/../ann.net');

@@ -35,8 +35,11 @@ foreach (array_values($dataSet) as $key => $dataRow) {
 
     $output = $ann->run($inputData);
 
-    $age = array_search(max($output), $output);
-    if ($dataRow[8] == $age) {
+    $age = array_filter($output, function ($data){
+        return $data > 0.09;
+    });
+
+    if (in_array($dataRow[8], array_keys($age))) {
         $success++;
     }
 }
