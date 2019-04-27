@@ -1,0 +1,27 @@
+{
+    "name": "matthieu88160/abalone_fann",
+    "description": "Abalone age guesser using AI",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "matthieu vallance",
+            "email": "matthieu.vallance@cscfa.fr"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "~5.6",
+        "ext-fann": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cscfa\\Abalone\\": "src/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    }
+}
