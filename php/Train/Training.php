@@ -43,7 +43,7 @@ $ann = new Ann($heap);
 
 $ann->trainFromFile(
     new SplFileInfo(__DIR__ . '/../trainingFile.data'),
-    20000,
+    2000,
     0,
     0.0001
 );
