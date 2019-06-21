@@ -18,14 +18,6 @@ use Cscfa\Abalone\Layer\LayerHeap;
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-// COS : 1.5
-// SIGMOID : 13.5
-// LINEAR : 19.1
-// SIN : 0.5
-// ELLIOT : 17.7
-// GAUSSIAN : 13.5
-// LINEAR_PIECE : 13.5
-
 $activationType = FANN_LINEAR;
 $heap = new LayerHeap(
     new LayerDefinition(7),

@@ -4,7 +4,6 @@ $fileStream = fopen(__DIR__ . '/abalone.data', 'r');
 
 $data = [];
 while($line = fgets($fileStream)) {
-    // M,0.455,0.365,0.095,0.514,0.2245,0.101,0.15,15
     if(preg_match('/.(,[0-9.]+){7},(.+)/', $line, $match)) {
         list(
             $gender,
